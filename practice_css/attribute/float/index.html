@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>clear与margin重叠</title>
+<style media="screen">
+  img{
+    height: 300px;
+    width: 400px;
+  }
+
+</style>
+</head>
+<body>
+  <h3>到底是什么（是不是float/clear） 造成div(a)的margin超出div问题</h3>
+  <h3>解：父元素的高度塌陷了，</h3>
+  <p>1.div中有文字的时候，div(a)的margin会超出div(wrap)<br>
+     2.div中没有文字的时候，div(a)的margin不超出div(wrap)<br>
+     3.同时，存在margin塌陷问题</p>
+<div style="background-color: #f5f5f5;">
+  <img src="./babymikey.jpg" style="float:left;">
+	<div style="clear:both; margin-bottom:100px;">div(a)</div>
+</div>
+<div style="margin-top: 100px;">本文字离图片的距离是？</div>
+<br><br><br><br>
+<div style="background-color: #f5f5f5; overflow: hidden;">
+	<img src="./babymikey.jpg" style="float:left; margin-bottom: 100px;">
+</div>
+<div style="margin-top: 100px;">本文字离图片的距离是？</div>
+</body>
+</html>

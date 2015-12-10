@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css margin塌陷问题</title>
+  <style>
+    .box1,
+    .box2,
+    .box3 {
+      width: 200px;
+    }
+    .box1 {
+      background-color: #55c45a;
+      height: 200px;
+      margin-bottom: -160px;
+    }
+    .box2 {
+      background-color: #d9fa7a;
+      height: 120px;
+      margin-bottom: -80px;
+    }
+    .box3 {
+      background-color: #e60879;
+      height: 40px;
+    }
+    img {
+      float: right;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h3>未利用到margin塌陷，用到了margin负值特性</h3>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <img src="./86BC68D1944F18722C011504DF3F3122.png" alt="">
+</body>
+</html>

@@ -1,0 +1,48 @@
+.cardfan{
+  width: 50%;
+  position: relative;
+  margin: 4rem auto;
+}
+.cardfan img{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  border: 10px solid #fee;
+  box-shadow: 2x 2px 4px 0 rgba(0,0,0,.2);
+  -webkit-transform-origin: center 1000px;
+  -webkit-transition:all .5s;
+}
+.cardfan img:nth-child(1){
+  -webkit-transform: rotate(-5deg);
+  z-index:3;
+  -webkit-filter:grayscale(1);
+}
+.cardfan img:nth-child(1):hover{
+  -webkit-filter:grayscale(0);
+}
+.cardfan img:nth-child(2){
+  -webkit-filter:sepia(1);
+}
+.cardfan img:nth-child(2):hover{
+  -webkit-filter:sepia(0);
+}
+.cardfan img:nth-child(3){
+  -webkit-filter:blur(5);
+}
+.cardfan img:nth-child(3):hover{
+  -webkit-filter:blur(0);
+}
+.cardfan img:nth-child(3){
+  -webkit-transform: rotate(5deg);  
+  z-index:-1;
+}
+
+
+.cardfan:hover img:nth-child(1){
+  -webkit-transform: rotate(-15deg);
+  z-index:3;
+}
+.cardfan:hover img:nth-child(3){
+  -webkit-transform: rotate(15deg);  
+  z-index:-1;
+}

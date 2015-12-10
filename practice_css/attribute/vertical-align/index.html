@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vertical-align练习</title>
+  <style>
+    .box{
+      display: inline-block;
+      height: 150px;
+      width: 150px;
+      background-color: #ccc;
+      border: 1px solid #555;
+    }
+    #boxWithWord{
+      background-color: #555;
+      color: #ccc;
+    }
+    #boxWithWord2{
+      background-color: #fff;
+      color: #000;
+      line-height: 0;
+    }
+  </style>
+</head>
+<body>
+<p class="explain">在一个box里面加文字之后，默认的vertical-align:baseline；盒子并没有对齐<br/>空盒子基线在它的margin-bottom<br/>有文字的盒子，它的基线按照里面文字的基线当作自己的基线</p>
+
+  <div class="box" id="boxWithWord"><span>something</span></div>
+  <div class="box"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+  <p class="explain">line-height:0<br/>盒子的隐匿文字节点在margin-top<br/>为了和盒子内文字vertical-align:baseline,强制盒子向上偏移</p>
+
+  <div class="box" id="boxWithWord2"><span>something</span></div>
+  <div class="box"></div>
+
+</body>
+</html>

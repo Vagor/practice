@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Fullpage.js练习</title>
+  <link href="http://cdn.bootcss.com/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet">  <script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/fullPage.js/2.7.4/vendors/jquery.easings.min.js"></script>
+  <script src="http://cdn.bootcss.com/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+  <script src="http://cdn.bootcss.com/move.js/0.4.0/move.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+</head>
+<body>
+  <header>HEADER</header>
+<div id="fullpage">
+    <div class="section">
+      <h1>第一屏</h1>
+      <p>Now,it's my turn.</p>
+    </div>
+    <div class="section">
+      <div class="box">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+      </div>
+      <h1>弹球动画</h1>
+    </div>
+    <div class="section">
+      <h1>陶林伟的课程</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>课程序号</th>
+            <th>课程名称</th>
+            <th>课程操作</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td class="number">140406</td>
+            <td class="course">移动应用开发课程</td>
+            <td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td> 
+          </tr>
+          <tr>
+            <td class="number">140407</td>
+            <td class="course">web前端开发课程</td>
+            <td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td> 
+          </tr>
+          <tr>
+            <td class="number">140408</td>
+            <td class="course">操作系统&数据库系列课程</td>
+            <td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td> 
+          </tr>
+          <tr>
+            <td class="number">140409</td>
+            <td class="course">智能硬件&物联网系列课程</td>
+            <td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td> 
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="section">
+      <h1>第四屏</h1>
+    </div>
+  </div>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#fullpage').fullpage({
+      sectionsColor:['#fcb000','#38434c','#fe6241','#58ce64'],
+      anchors:['page1','page2','page3','page4'],
+      // scrollingSpeed:2000,
+      // resize:true,
+      // loopHorizontal:false,
+      // loopTop:true,
+      // loopBottom:true,
+      // autoScrolling:false,
+      // scrollBar:true,
+      // paddingTop:0,
+      paddingBottom:0,
+      // fixedElements:'header',
+      // fixedElements:'#fullpageMenu',
+      // menu:'#fullpageMenu',
+      navigation:true,
+      navigationPosition:'right',
+      navigationTooltips:['1','2','3','4'],
+      afterLoad:function(anchorLink,index){
+       console.log(anchorLink,index);
+      },
+      onLeave:function(index,nextIndex,direction){
+        console.log(index,nextIndex,direction);
+      }
+    });
+  });
+  </script>
+</body>
+</html>

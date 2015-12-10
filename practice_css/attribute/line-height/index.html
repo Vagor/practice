@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>line-height练习</title>
+  <style>
+    .box{
+      height:300px;
+      width: 400px;
+      background-color: #ccc;
+      text-align: center;
+      line-height: 300px;
+    }
+    .box img{
+      height:150px;
+      width: 200px;
+      vertical-align: middle;
+    }
+    .text{
+      display: inline-block;
+      line-height: normal;
+      text-align: left;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h2>大小不固定的图片垂直居中</h2>
+  <h3>line-height和vertical－align：middle（近似居中） middle就是基线往上1/2，所以不同字体不同</h3>
+  <h3>IE8+支持</h3>
+  <div class="box"><img src="./virus.png" alt=""></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2>多行文字的垂直居中</h2>
+  <h3>把文字设置成inline-block(和图片一样)</h3>
+  <h3>line-height和vertical－align：middle（近似居中） middle就是基线往上1/2，所以不同字体不同</h3>
+  <h3>IE8+支持</h3>
+  <div class="box">
+    <div class="text">line-height和vertical－align：middle（近似居中） middle就是基线往上1/2，所以不同字体不同line-height和vertical－align：middle（近似居中） middle就是基线往上1/2，所以不同字体不同line-height和vertical－align：middle（近似居中） middle就是基线往上1/2，所以不同字体不同</div>
+  </div>
+</body>
+</html>

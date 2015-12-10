@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+	<title>陶林伟的课程</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			color: #666666;
+		}
+
+		table{
+			width: 98%;
+			margin: 0 auto;
+			border: 1px solid #666; 
+			border-collapse: collapse;
+	    border-spacing: 0;
+	    border-color: rgba(0 0 0 0);
+	    box-shadow: 0 0 10px rgba(0,0,0,.5);
+		}
+		th{
+			background-color: #58ce64;
+		}
+		thead,tbody{
+			padding: 0;
+		}
+		thead th,tbody td{
+			text-align: center;
+			border: 1px solid #666; 
+			padding: 5px 0;
+		}
+		a{
+			color: #fdccbe;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+
+		@media (max-width: 480px){
+			table{
+				box-shadow: none;
+				border: none;
+				position: relative;
+			}
+			table thead{
+				display: none;
+			} 
+			table td{
+				border: none;
+			}
+			table .number,
+			table .course{
+				display: block;
+			}
+			table .number{
+				background-color: #58ce64;
+				text-align: left;
+				padding-left: 25vw;
+				margin: 0 auto;
+			}
+			table .number:before{
+				content: "课程序号";
+				position: absolute;
+				left: 1vw;
+				font-weight: bold;
+			}
+			table .course{
+				text-align: left;
+				padding-left: 25vw;
+				margin: 0 auto;
+			}
+			table .course:before{
+				content: "课程名称";
+				position: absolute;
+				left: 1vw;
+				font-weight: bold;
+			}
+			tbody tr{
+				position: relative;
+				margin-bottom: 5vw;
+				display: block;
+				box-shadow: 0 1px 10px rgba(0,0,0,.5);
+			}
+			table .actions{
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			h1{
+				text-align: left;
+				margin-left: 3vw;
+				text-shadow: 0 1px 1px rgba(0,0,0,.5);
+			}
+		}
+	</style>
+
+</head>
+<body>
+<h1>陶林伟的课程</h1>
+<table>
+	<thead>
+		<tr>
+			<th>课程序号</th>
+			<th>课程名称</th>
+			<th>课程操作</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<tr>
+			<td class="number">140406</td>
+			<td class="course">移动应用开发课程</td>
+			<td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td>	
+		</tr>
+		<tr>
+			<td class="number">140407</td>
+			<td class="course">web前端开发课程</td>
+			<td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td>	
+		</tr>
+		<tr>
+			<td class="number">140408</td>
+			<td class="course">操作系统&数据库系列课程</td>
+			<td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td>	
+		</tr>
+		<tr>
+			<td class="number">140409</td>
+			<td class="course">智能硬件&物联网系列课程</td>
+			<td class="actions"><a href="#">Eidt</a><a href="#">Remove</a></td>	
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

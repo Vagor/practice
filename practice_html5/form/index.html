@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>html5中的表单元素</title>
+</head>
+<body>
+  <h2>input</h2>
+  <h3>兼容性好的属性</h3>
+  placeholder：<input type="text" name="greeting" placeholder="greetings">
+  <br>
+  <br>
+  type=number: <input type="number">
+  <br>
+  <br>
+  type=range: <input name='range1' type="range" min='0' max="100" step="1">
+  <br>
+  <br>
+  type=file: <input type="file">
+  <br>
+  <br>
+  <h3>兼容性差的属性</h3>
+  type=datetime: <input type="datetime">
+  <br>
+  <br>
+  type=date: <input type="date">
+  <br>
+  <br>
+  type=month: <input type="month">
+  <br>
+  <br>
+  type=week: <input type="week">
+  <br>
+  <br>
+  type=time: <input type="time">
+  <br>
+  <br>
+  type=datetime-local: <input type="datetime-local">
+  <br>
+  <br>
+  list：<input type="text" name="greeting" list="greetings">
+  <datalist id="greetings" style="display:none;">
+    <option value="Good Morning">Good Morning</option>
+    <option value="Hello">Hello</option>
+    <option value="Good Afternoon">Good Afternoon</option>
+  </datalist>
+  <br>
+  <br>
+  type=search: <input type="search">(样式变化了)
+  <br>
+  <br>
+  type=tel: <input type="tel" pattern="[0-9]{4}" placeholder="请输入四位数字">
+  <br>
+  <br>
+  type=url: <input type="url">
+  <br>
+  <br>
+  type=email: <input name="email" type="email" required value="vagor@gmail.com">
+  <br>
+  <br>
+  type=color: <input type="color">
+  <br>
+  <br>
+  <input type="submit" name="" id="">
+</body>
+</html>
