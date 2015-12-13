@@ -13,14 +13,13 @@ $conn = connectDB();
 $result = mysql_query("SELECT * FROM users");
 $dataCount = mysql_num_rows($result);
 
-for ($i=0; $i <$dataCount ; $i++) { 
+for ($i=0; $i <$dataCount ; $i++) {
     $result_arr = mysql_fetch_assoc($result);
     $id = $result_arr['id'];
     $name = $result_arr['name'];
     $age = $result_arr['age'];
     echo "<tr><td>$id</td><td>$name</td><td>$age</td><td><a href='edituser.php?id=$id'>修改</a> <a href='deluser.php?id=$id'>删除</a></td></tr>";
 }
-
 ?>
 </table>
 <form action="upload.php" method="post" enctype="multipart/form-data">
