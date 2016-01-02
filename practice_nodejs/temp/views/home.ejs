@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>New template</title>
+	</head>
+	<body>
+	  <p>模版文件静态内容：</p>
+	  <p>后面跟的是动态js内容： <%= name%></p>
+		<p>后面跟的是动态js内容（req.params方法获得的）： <%= id%></p>
+		<div id="newTemp"></div>
+	</body>
+	<script type="text/javascript" src="./ejs.min.js"></script>
+	<script type="text/javascript">
+		var tmpl = '<p>new template</p>';
+		var newTempDiv = document.getElementById('newTemp');
+		setTimeout(function(){
+			newTempDiv.innerHTML = ejs.render(tmpl); //套入模版	
+		},2000);
+	</script>
+</html>

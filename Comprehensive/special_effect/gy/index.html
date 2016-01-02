@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>fullpage</title>
+  <script src="./js/jquery-1.8.3.min.js"></script>
+  <script src="./js/jquery.fullPage.min.js"></script>
+  <link rel="stylesheet" href="./css/jquery.fullPage.css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript">
+    $(function() {
+      $(".con").fullpage({
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+        'navigation': true,
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+        menu: '#menu',
+        verticalCentered: false,
+      })
+    })
+  </script>
+
+  <style media="screen">
+
+  body, html, header, section, div, ul, li, a ,p {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .s1 {
+    background: url(./images/s1.jpg) center
+  }
+  .s2 {
+    background: url(./images/s2.jpg) center
+  }
+  .s3 {
+    background: url(./images/s3.jpg) center
+  }
+  .s4 {
+    background: url(./images/s4.jpg) center
+  }
+  .s5 {
+    background: url(./images/s5.jpg) center
+  }
+
+  /*头部区域*/
+  .hd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .hd .inner {
+    width: 980px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  .hd .logo {
+    float: left;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 40px;
+  }
+  .hd .logo img {
+    height: 40px;
+  }
+  .hd nav {
+    float: left;
+  }
+  .hd nav li{
+    float: left;
+  }
+  .hd nav li a{
+    line-height: 60px;
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+  }
+  .hd nav li a:hover{
+    background: #48bf52;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .hd nav li:active a,
+  .hd nav li.active a {
+    background: #48bf52;
+    color: rgba(0, 0, 0, 0.8);
+  }
+    /*第一页*/
+
+    .s1 {
+      background: url(./images/s1.jpg) center;
+      overflow: hidden;
+    }
+
+    .s1 img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -545px;
+      margin-top: -230px;
+      opacity: 0;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      -webkit-transition-delay: 0.6s;
+      transition-delay: 0.6s;
+    }
+
+    .s1.active img {
+      opacity: 1;
+    }
+    /*共同样式*/
+
+    section {
+      overflow: hidden;
+    }
+
+    section .left {
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      margin-top: -200px;
+      z-index: 2;
+    }
+
+    section .left li {
+      float: left;
+      margin-right: 20px;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+    }
+
+    section .left li p {
+      margin: 40px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    section .left li a {
+      display: block;
+      width: 98px;
+      height: 36px;
+      background: url(./images/buy.jpg);
+    }
+
+    section .right {
+      position: absolute;
+      right: 5%;
+      top: 15%;
+      z-index: 3;
+      text-align: right;
+    }
+
+    section .right h1 {
+      font-size: 34px;
+      color: #333;
+      font-weight: 100px;
+    }
+
+    section .right p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    section .right a:hover {
+      color: #a33216;
+    }
+
+    section .bg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+    /*第二页*/
+
+    .s2 {
+      background: url(./images/s2.jpg) center;
+    }
+
+    .s2 .left li {
+      -webkit-transform: translateY(1000px);
+      transform: translateY(1000px);
+    }
+
+    .s2 .left li:nth-child(1) {
+      -webkit-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+    }
+
+    .s2 .left li:nth-child(2) {
+      -webkit-transition-delay: 0.7s;
+      transition-delay: 0.7s;
+    }
+
+    .s2 .left li:nth-child(3) {
+      -webkit-transition-delay: 0.9s;
+      transition-delay: 0.9s;
+    }
+
+    .s2.active .left li {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    /*第三页*/
+
+    .s3 {
+      background: url(./images/s3.jpg) center;
+    }
+
+    .s3 .left li {
+      -webkit-transition-delay: 0.8s;
+      transition-delay: 0.8s;
+    }
+
+    .s3 .left li:nth-child(1) {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    .s3 .left li:nth-child(2) {
+      -webkit-transform: translateX(-279px);
+      transform: translateX(-279px);
+    }
+
+    .s3 .left li:nth-child(3) {
+      -webkit-transform: translateX(-558px);
+      transform: translateX(-558px);
+    }
+
+    .s3.active .left li {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    /*第四页*/
+    /*定义动画*/
+    @keyframes move1 {
+      0% {
+        -webkit-transform: translate(330px, -1000px);
+        transform: translate(330px, -1000px);
+      }
+      20% {
+        -webkit-transform: translate(330px, 0);
+        transform: translate(330px, 0);
+      }
+      40% {
+        -webkit-transform: translate(330px, -50px);
+        transform: translate(330px, -50px);
+      }
+      60% {
+        -webkit-transform: translate(330px, -0);
+        transform: translate(330px, -0);
+      }
+      100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+    @-webkit-keyframes move1 {
+      0% {
+        -webkit-transform: translate(330px, -1000px);
+        transform: translate(330px, -1000px);
+      }
+      20% {
+        -webkit-transform: translate(330px, 0);
+        transform: translate(330px, 0);
+      }
+      40% {
+        -webkit-transform: translate(330px, -50px);
+        transform: translate(330px, -50px);
+      }
+      60% {
+        -webkit-transform: translate(330px, -0);
+        transform: translate(330px, -0);
+      }
+      100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+    @keyframes move2 {
+      0% {
+        -webkit-transform: translate(0, -1000px);
+        transform: translate(0, -1000px);
+      }
+      20% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      40% {
+        -webkit-transform: translate(0, -50px);
+        transform: translate(0, -50px);
+      }
+      60% {
+        -webkit-transform: translate(0, -0);
+        transform: translate(0, -0);
+      }
+      100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+    @-webkit-keyframes move2 {
+      0% {
+        -webkit-transform: translate(0, -1000px);
+        transform: translate(0, -1000px);
+      }
+      20% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      40% {
+        -webkit-transform: translate(0, -50px);
+        transform: translate(0, -50px);
+      }
+      60% {
+        -webkit-transform: translate(0, -0);
+        transform: translate(0, -0);
+      }
+      100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+
+    @keyframes move3 {
+      0% {
+        -webkit-transform: translate(-330px, -1000px);
+        transform: translate(-330px, -1000px);
+      }
+      20% {
+        -webkit-transform: translate(-330px, 0);
+        transform: translate(-330px, 0);
+      }
+      40% {
+        -webkit-transform: translate(-330px, -50px);
+        transform: translate(-330px, -50px);
+      }
+      60% {
+        -webkit-transform: translate(-330px, -0);
+        transform: translate(-330px, -0);
+      }
+      100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+    @-webkit-keyframes move3 {
+      0% {
+        -webkit-transform: translate(-330px, -1000px);
+        transform: translate(-330px, -1000px);
+      }
+      20% {
+        -webkit-transform: translate(-330px, 0);
+        transform: translate(-330px, 0);
+      }
+      40% {
+        -webkit-transform: translate(-330px, -50px);
+        transform: translate(-330px, -50px);
+      }
+      60% {
+        -webkit-transform: translate(-330px, -0);
+        transform: translate(-330px, -0);
+      }
+      100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+
+    .s4 {
+      background: url(./images/s4.jpg) center;
+    }
+
+    .s4 .left li:nth-child(1) {
+      -webkit-transform: translate(330px, -1000px);
+      transform: translate(330px, -1000px);
+    }
+
+    .s4.active .left li:nth-child(1) {
+      -webkit-animation: move1 1.5s 0.8s forwards;
+      animation: move1 1.5s 0.8s forwards;
+      /*forwards是停留在最后一帧*/
+    }
+
+    .s4 .left li:nth-child(2) {
+      -webkit-transform: translate(0, -1000px);
+      transform: translate(0, -1000px);
+    }
+
+    .s4.active .left li:nth-child(2) {
+      -webkit-animation: move2 1.5s 0.8s forwards;
+      animation: move2 1.5s 0.8s forwards;
+      /*forwards是停留在最后一帧*/
+    }
+
+    .s4 .left li:nth-child(3) {
+      -webkit-transform: translate(-330px, -1000px);
+      transform: translate(-330px, -1000px);
+    }
+
+    .s4.active .left li:nth-child(3) {
+      -webkit-animation: move3 1.5s 0.8s forwards;
+      animation: move3 1.5s 0.8s forwards;
+      /*forwards是停留在最后一帧*/
+    }
+    /*第五页*/
+
+    .s5 {
+      background: url(./images/s5.jpg) center;
+      perspective: 500px;
+      /*透视效果*/
+    }
+
+    .s5 .left li {
+      transform: translate3d(-1200px, -1200px, -500px) rotateX(145deg);
+    }
+
+    .s5 .left li:nth-child(1) {
+      transition-delay: 0.6s;
+    }
+
+    .s5 .left li:nth-child(2) {
+      transition-delay: 0.8s;
+    }
+
+    .s5 .left li:nth-child(3) {
+      transition-delay: 1s;
+    }
+
+    .s5.active .left li {
+      transform: translate3d(0, 0, 0) rotateX(0);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部区域 -->
+  <header class="hd">
+    <div class="inner">
+      <a href="#" class="logo">
+        <img src="./images/logo.png" alt="">
+      </a>
+      <nav>
+        <ul id="menu">
+          <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+          <li data-menuanchor="page2"><a href="#page2">产品组</a></li>
+          <li data-menuanchor="page3"><a href="#page3">设计组</a></li>
+          <li data-menuanchor="page4"><a href="#page4">前端组</a></li>
+          <li data-menuanchor="page5"><a href="#page5">后台组</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="con">
+    <!-- 第一页 -->
+    <section class="section s1">
+      <img src="./images/wenzi.png" alt="">
+    </section>
+    <!-- 第二页 -->
+    <section class="section s2">
+      <div class="left">
+        <ul>
+          <li>
+            <img src="./images/img1.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img2.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img3.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <h1>观止</h1>
+        <p>价格：99元起
+          <br> 艺术家：吉祥物语
+          <br>
+          <a href="#">个人主页</a>
+        </p>
+      </div>
+      <div class="bg">
+        <img src="images/sc2.png" alt="" />
+      </div>
+    </section>
+    <section class="section s3">
+      <div class="left">
+        <ul>
+          <li>
+            <img src="./images/img4.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img5.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img6.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <h1>KIDS</h1>
+        <p>
+          价格：249元
+          <br> 艺术家：Chow-lee
+          <br>
+          <a href="#">个人主页</a>
+        </p>
+      </div>
+      <div class="bg">
+        <img src="images/sc3.png" alt="" />
+      </div>
+    </section>
+    <section class="section s4">
+      <div class="left">
+        <ul>
+          <li>
+            <img src="./images/img7.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img8.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img9.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <h1>绽放</h1>
+        <p>价格：269元
+          <br> 艺术家：北邦
+          <br>
+          <a href="#">个人主页</a>
+        </p>
+      </div>
+      <div class="bg">
+        <img src="images/sc4.png" alt="" />
+      </div>
+    </section>
+    <section class="section s5">
+      <div class="left">
+        <ul>
+          <li>
+            <img src="./images/img10.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img11.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <img src="./images/img12.png" alt="">
+            <p>Love
+              <br>50*60cm</p>
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <h1>沉睡的森林</h1>
+        <p>价格：249元
+          <br> 艺术家：赵娜
+          <br>
+          <a href="#">个人主页</a>
+        </p>
+      </div>
+      <div class="bg">
+        <img src="images/sc5.png" alt="" />
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
